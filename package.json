@@ -1,0 +1,21 @@
+{
+  "name": "hapi-test",
+  "version": "1.0.0",
+  "description": "",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "mocha"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "good": "^5.1.1",
+    "good-console": "^4.1.0",
+    "hapi": "^8.1.0",
+    "joi": "^5.1.0",
+    "lodash": "^2.4.1",
+    "lout": "^6.1.0",
+    "require-directory": "^2.0.0"
+  }
+}
