@@ -1,0 +1,1 @@
+Just a little playground to get started with hapi. 

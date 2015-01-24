@@ -10,10 +10,16 @@ server.connection({ port: process.env.PORT || 3000 });
 require('./server/lib/hapi-api')(server);
 
 // include static file serving (ie the client folder)
-require('./server/lib/hapi-static')(server);
+server.route(require('./server/lib/hapi-static'));
 
-require('./server/lib/hapi-plugins')(server, function() {
-  server.start(function () {
-    server.log('info', 'Server running at: ' + server.info.uri);
-  });
+server.register(require('./server/lib/hapi-plugins'), function (err) {
+  if (err) throw err; // something bad happened loading the plugin
+
+  if (!module.parent) { // dont start server if we are just running a test
+    server.start(function () {
+      server.log('info', 'Server running at: ' + server.info.uri);
+    });
+  }
 });
+
+module.exports = server;
