@@ -12,10 +12,13 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "boom": "^2.6.1",
     "good": "^5.1.1",
     "good-console": "^4.1.0",
     "hapi": "^8.1.0",
+    "hapi-auth-jwt": "^2.0.0",
     "joi": "^5.1.0",
+    "jsonwebtoken": "^3.2.2",
     "lodash": "^2.4.1",
     "lout": "^6.1.0",
     "passport": "^0.2.1",

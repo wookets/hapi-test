@@ -3,6 +3,7 @@
 
 
 module.exports = [
+  {register: require('hapi-auth-jwt')},
   {register: require('lout')},
   {register: require('good'),
     options: {
